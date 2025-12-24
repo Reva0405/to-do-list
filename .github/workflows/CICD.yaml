@@ -42,17 +42,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifact
-
-      - name: Move build files
-        run: |
-          mkdir site
-          cp -r build-artifact/build/* site/
       
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: ./build
 
         
         
