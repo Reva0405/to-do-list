@@ -45,7 +45,8 @@ jobs:
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_dir: ./build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build-artifact/build
 
         
         
