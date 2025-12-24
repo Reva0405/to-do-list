@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        uses: npm install
+        run: npm install
 
       - name: Run build
-        uses: npm run build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact
