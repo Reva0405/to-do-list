@@ -42,12 +42,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifact
+          path: ./site
       
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build-artifact
+          publish_dir: ./site
 
         
         
